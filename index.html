@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC 2 Bachillerato</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 80px;
+            background-color: #0995EC;
+        }
+        .header {
+            border: 12px solid #0B0A57; /* Color oscuro */
+            padding: 20px;
+            text-align: center;
+            background-color: #007BFF; /* Color azul */
+            color: white; /* Texto en blanco */
+            margin-bottom: 10px;
+        }
+        .note {
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        #datetime {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .column {
+            flex: 1 1 30%; /* Ajuste el tamaño base de la columna */
+            margin: 10px;
+            padding: 10px; /* Reducir el padding */
+            background-color: #fff;
+            border: 1px solid #5E2DB9;
+            overflow: auto; /* Permitir desplazamiento si el contenido es demasiado grande */
+        }
+        .photo-gallery {
+            display: flex; /* Usar flexbox para la galería de fotos */
+            justify-content: space-between;
+            margin-bottom: 20px; /* Espacio debajo de la galería */
+        }
+        .photo-gallery img {
+            width: 45%; /* Ajusta el tamaño de las imágenes */
+            height: auto; /* Mantiene la proporción de la imagen */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>TIC Irene 2 Bachillerato</h1>
+    </div>
+
+    <div class="note">
+        <h2>HOLA</h2>
+        <p>Esta es mi página web sobre el instituto IES Claudio Sanchez Albornoz.</p>
+    </div>
+
+    <h2>Fecha y hora:</h2>
+    <span id="datetime"></span>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const currentDateTime = now.toLocaleString('es-ES', { year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            document.querySelector('#datetime').innerText = currentDateTime;
+        }
+
+        // Actualizar la hora cada segundo
+        setInterval(updateDateTime, 1000);
+        // Inicializar la visualización
+        updateDateTime();
+    </script>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+
+    <div class="photo-gallery">
+        <img src="imagenes/tapitaaa.GIF" alt="claudio sanchez albornoz">
+        <img src="imagenes/pololi.GIF" alt="claudio sanchez albornoz">
+    </div>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+
+ <div class="note">
+        <h2>BREVE HISTORIA SOBRE EL INSTITUTO</h2>
+        <p>La historia de este edificio se remonta a 1928 cuando comienza a elaborarse su proyecto de construcción “con destino a la Escuela Normal de León… en terrenos cedidos por el Ayuntamiento y la Diputación”. Pero no es hasta octubre de 1931 cuando comienzan las obras, terminándose éstas en diciembre de 1934.
+
+<br>
+
+<br>
+
+
+Tras haberse equipado completamente estalla la guerra en 1936 y el edificio es destinado a otros usos, siendo ocupado por el Grupo de Cazas de la Legión Cóndor. Una vez que la Legión Cóndor abandonó el edificio se cede éste, con muebles y utensilios, a la Delegación de Frentes y Hospitales para instalar un hospital de guerra.
+
+<br>
+
+<br>
+
+En marzo de 1940 la Normal consigue que se le devuelva el piso de arriba de la escuela y que la Diputación pague los gastos de desinfección. En diciembre de 1942 se recupera otra planta del edificio y ese mismo año se instala en él una escuela de capataces de minas, conviviendo entonces los estudiantes de magisterio con los de minas, con el hospital y con el Frente de Juventudes. Finalmente, en 1954, se desocupa el edificio pasando su uso exclusivo a la Escuela Normal. Y así habría de serlo hasta 1989, en que la Escuela Normal se traslada a una nueva ubicación en el Campus Universitario.
+
+<br>
+
+<br>
+
+A partir de este año -1989- se crea por desdoble del Politécnico de León, el Instituto de Formación Profesional Número 2,  adquiriendo rápidamente la configuración como Instituto de Educación Secundaria , que pasa a denominarse, por decisión del centro, Claudio Sánchez Albornoz nombrado hijo adoptivo de León, por sus aportaciones al conocimiento de la historia del Reino de León.
+
+</p>
+    </div>
+
+
+
+
+    <div class="container">
+        <div class="column">
+            <h2>ASIGNATURAS</h2>
+            <ul>
+                <li>Matemáticas</li>
+                <li> Historia</li>
+                <li> Biología</li>
+                <li> Química</li>
+                <li> Lengua Española</li>
+                <li> TIC</li>
+                <li> Inglés</li>
+                <li> Historia de la filosofía </li>
+       <br>
+          <br>
+            <br>
+                <br>
+
+
+<a href="https://academico.unizar.es/evau/modelos-orientativos-de-examen-pau-2025">Modelos Orientativos de Examen PAU 2025</a>
+
+         <br>
+          <br>
+            <br>
+                <br>
+
+
+<a href="http://iesclaudiosanchezalbornoz.centros.educa.jcyl.es/sitio/">IES Claudio Sánchez Albornoz</a>
+
+
+            </ul>
+        </div>
+        <div class="column">
+            <h2>MENSAJES</h2>
+            <form name="f" onsubmit="return enviarMensaje()">
+                <div>
+                    <textarea id="panel" rows="10" cols="30">Conectado</textarea>
+                </div>
+                <div>
+                    <input type="text" name="mensaje" size="30"/> 
+                    <input type="submit" value="Enviar"/>
+
+</div>
+
+
+<br>
+<br>
+<br>
+
+
+
+
+<label>Correo electrónico
+</label>
+
+     <input class="Correo" type = "text" min="3" max = "50" size = "40" placeholder="Escribe aquí tu correo">
+
+<br><br>
+
+<label>Nombre
+</label>
+
+     <input type = "text" min="3" max = "50" size = "40" placeholder="Escribe aquí tu nombre">
+
+<br><br>
+
+<label>Apellido
+</label>
+
+     <input type = "text" min="3" max = "50" size = "40" placeholder="Escribe aquí tu apellido">
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<div id="mensaje"></div>
+    <textarea id="texto" cols="20" rows="10"></textarea>
+
+    <script>
+        function enviarMensaje() {
+            document.getElementById("panel").value += "\n" + document.f.mensaje.value;
+            document.f.mensaje.value = "";
+            return false;
+        }
+
+        setInterval(function() {
+            let cuadro = document.getElementById("texto").value;
+            document.getElementById("mensaje").innerHTML = cuadro;
+        }, 1000);
+    </script>
+
+
+
+
+
+
+
+
+</form>
+
+
+</div>
+
+
+
+
+ 
+
+
+
+
+        <div class="column">
+            <h2>IES CLAUDIO SANCHEZ ALBORNOZ</h2>
+            <p>
+<div id="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2936.692803703349!2d-5.576770825578136!3d42.604260819641205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd379a8f12a7cff9%3A0xcf14c8a725e8691e!2sIES%20Claudio%20S%C3%A1nchez%20Albornoz!5e0!3m2!1ses!2ses!4v1727693228527!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+
+
+
+</p>
+        </div>
+    </div>
+
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="note">
+        <h2>CALENDARIO</h2>
+        <p>A continuación habrá un calendario en el que se muestran las festvidades , examenes y excursiones  </p> 
+
+
+<br>
+
+
+
+<a href="https://www.calendario-365.es/calendario-2024.html">Calendario</a>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .calendar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .month {
+            width: 500px;
+            margin: 60px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .month h3 {
+            text-align: center;
+            background-color: #007BFF;
+            color: white;
+            margin: 0;
+            padding: 10px 0;
+        }
+        .days {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            padding: 10px;
+        }
+        .days div {
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            background-color: #f9f9f9;
+            margin: 2px;
+            border-radius: 10px;
+        }
+        .days .today {
+            background-color: #ffeb3b;
+        }
+        .days .event {
+            background-color: #4caf50;
+            color: white;
+        }
+        .event-details {
+            padding: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+
+</div>
+
+CONTACTANOS
+
+<br>
+<br>
+<br>
+
+
+
+
+Horario: de lunes a viernes de 9:00 a 14:20 h
+
+<br>
+<br>
+
+
+
+
+Teléfono: 987 876 146
+
+<br>
+<br>
+
+
+Correo: 24017734@educa.jcyl.es
+
+
+
+
+<br>
+<br>
+
+
+Redes sociales :
+
+<br>
+
+
+
+<a href="https://www.instagram.com/iesclaudio/?hl=es">instagram</a>
+<br>
+
+
+
+<a href="https://www.facebook.com/iesclaudiosanchezalbornoz.centros.educa.jcyl.es/?locale=es_ES">facebook</a>
+
+
+<br>
+
+<a href="https://x.com/ies_csa_leon/status/1192054670128222214">twitter</a>
+
+<br>
+<br>
+
+
+
+
+
+
+<footer style="text-align: center; padding: 20px; background-color: #E16D0E;">
+    <p>&copy; 30/10/2024  Todos los derechos de autor reservados.</p>
+</footer>
+
+
+</body>
+</html>
